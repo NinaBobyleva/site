@@ -1,0 +1,239 @@
+ @keyframes heartbeat {
+    from {
+        transform:scale(1);
+        transform-origin:center center;
+        animation-timing-function:ease-out
+    }
+    10% {
+        transform:scale(.91);
+        animation-timing-function:ease-in
+    }
+    17% {
+        transform:scale(.98);
+        animation-timing-function:ease-out
+    }
+    33% {
+        transform:scale(.87);
+        animation-timing-function:ease-in
+    }
+    45% {
+        transform:scale(1);
+        animation-timing-function:ease-out
+    }
+}
+
+
+.top {
+    &__section-cart {
+        height: 400px;
+        background-image: url(img/cart/bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &__title-cart {
+        color: #FFF;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 70px;
+        margin-top: 127px;
+        margin-bottom: 126px;
+    }
+}
+
+
+.order {
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+        margin-top: 64px;
+    }
+    &__product {
+        grid-column: 1 / -5;
+        &-info {
+            display: flex;
+            gap: 670px;
+            margin-bottom: 14px;
+            &-text {
+                color: #000;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+        
+        &-item {
+            max-width: 786px;
+            border-top: 1px solid #CACDD8;
+            display: flex;
+            gap: 235px;
+            padding-top: 25px;
+            padding-bottom: 32px;
+            &-left {
+                display: flex;
+                gap: 32px;
+            }
+            &-img {
+                width: 173px;
+                height: 173px;
+            }
+            &-title {
+                color: #000;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+            &-text {
+                color: #888;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-top: 14px;
+                padding-bottom: 16px;
+            }
+            &-price {
+                color: #050505;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                padding-bottom: 15px;
+            }
+            &-box {
+                display: flex;
+                gap: 30px;
+            }
+            &-link {
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 210%;
+                text-decoration-line: underline;
+            }
+            &-input {
+                width: 71px;
+                height: 51px;
+                border-radius: 6px;
+                background: #F7F6F6;
+                outline: none;
+                border: none;
+                color: var(--Color---7, #000);
+                text-align: center;
+                font-family: inherit;
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                padding: 11px 24px 13px 0px;
+            }
+        }
+        &-button {
+            width: 200px;
+            height: 37px;
+            border-radius: 50px;
+            border: 1px solid #000;
+            background: transparent;
+            outline: none;
+            color: #020202;
+            text-align: center;
+            font-family: inherit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: all 400ms;
+            &:hover {
+                background: #000;
+                color: #FFF;
+            }
+        }
+    
+    }
+    &__button {
+        padding-top: 8px;
+    }
+    
+    &__cart {
+        max-width: 379px;
+        grid-column: 9 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background: #F7F6F6;
+        &-title {
+            color: #000;
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 36px;
+            padding-top: 42px;
+            padding-bottom: 37px;
+        }
+        &-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 44px;
+            &-input {
+                width: 288px;
+                border: none;
+                outline: none;
+                background: transparent;
+                border-bottom: 1px solid #CACDD8;
+                &::placeholder {
+                    color: #000;
+                    font-family: inherit;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    padding-bottom: 3px;   
+                }  
+            }
+        }
+        &-text {
+            color: #000;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-top: 68px;
+            span {
+                color: #000;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+        &-button {
+            width: 290px;
+            height: 41px;
+            border-radius: 20px;
+            border: 1px solid #040404;
+            background-color: transparent;
+            outline: none;
+            color: #000;
+            font-family: inherit;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 18px;
+            margin-bottom: 148px;
+            animation:heartbeat 1.5s ease-in-out 7 both
+        }
+        
+    }
+}

@@ -1,0 +1,78 @@
+.top {
+    
+    &__section-catalog {
+        height: 400px;
+        background-image: url(img/catalog/bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+    }
+    
+    &__title-catalog {
+        color: #FFF;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 70px;
+        margin-top: 127px;
+        margin-bottom: 126px;
+    }
+}
+
+
+
+.info {
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 64px;
+        padding-bottom: 32px;
+    }
+    &__span {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-decoration: none;
+    }
+    &__form {
+        position: relative;
+        &::after {
+            content: url(img/catalog/Polygon\ 1.svg);
+            position: absolute;
+            top: 50%;
+            right: 22px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
+    &__select {
+        width: 288px;
+        height: 41px;
+        border-radius: 20px;
+        border: 1px solid #C4C4C4;
+        color: #000;
+        font-family: inherit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+
+
+.catalog {
+    &__box {
+        column-gap: 32px;
+        row-gap: 48px;
+    }
+}
+
